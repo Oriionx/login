@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Consultório L&M Odontologia LTDA</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    nav { margin-bottom: 20px; }
+    nav button { margin-right: 10px; padding: 10px; }
+    section { display: none; }
+    section.active { display: block; }
+    .field { margin-bottom: 8px; }
+    .field label { font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Consultório L&M Odontologia LTDA</h1>
+  <nav>
+    <button onclick="show('info')">Informações</button>
+    <button onclick="show('contato')">Contato</button>
+    <button onclick="show('local')">Localização</button>
+    <button onclick="show('cnae')">Atividades (CNAE)</button>
+    <button onclick="show('socios')">Sócios</button>
+    <button onclick="show('sobre')">Sobre/Cadastro</button>
+  </nav>
+
+  <section id="info">
+    <div class="field"><label>CNPJ:</label>48.794.882/0001-30</div>
+    <div class="field"><label>Razão Social:</label>Consultório L&M Odontologia LTDA</div>
+    <div class="field"><label>Data de Abertura:</label>02/12/2022</div>
+    <div class="field"><label>Porte:</label>Micro Empresa (ME)</div>
+    <div class="field"><label>Natureza Jurídica:</label>Sociedade Empresária Limitada</div>
+    <div class="field"><label>Optante Simples:</label>Sim (desde 01/01/2024)</div>
+    <div class="field"><label>Capital Social:</label>R$ 10.000,00</div>
+    <div class="field"><label>Tipo:</label>Matriz</div>
+    <div class="field"><label>Situação:</label>Ativa</div>
+    <div class="field"><label>Data Situação Cadastral:</label>02/12/2022</div>
+  </section>
+
+  <section id="contato">
+    <div class="field"><label>Telefone:</label>(11) 2925‑6531</div>
+    <div class="field"><label>E‑mail:</label>fiscalcataldo@gmail.com</div>
+  </section>
+
+  <section id="local">
+    <div class="field"><label>Endereço:</label>Avenida Lourenço Cabreira, 781 – Sala 15</div>
+    <div class="field"><label>Bairro:</label>Jardim Ana Lúcia</div>
+    <div class="field"><label>CEP:</label>04812‑010</div>
+    <div class="field"><label>Cidade/UF:</label>São Paulo/SP</div>
+  </section>
+
+  <section id="cnae">
+    <div class="field"><label>CNAE Principal:</label>86.30‑5‑04 – Atividade odontológica</div>
+    <p>Atende consultas e tratamentos odontológicos em consultório e atendimento móvel :contentReference[oaicite:1]{index=1}.</p>
+  </section>
+
+  <section id="socios">
+    <div class="field"><label>Sócio-Administrador:</label>Larissa dos Santos Alcala (desde 02/12/2022)</div>
+    <div class="field"><label>Sócio-Administrador:</label>Moises Wevander Santos Silva (desde 02/12/2022)</div>
+  </section>
+
+  <section id="sobre">
+    <p>Consultório L&M Odontologia LTDA é uma Sociedade Empresária Limitada, aberta em 02/12/2022 em São Paulo-SP, com capital de R$10.000,00. Está ativa, registrada como matriz, e optante pelo Simples Nacional desde 01/01/2024 :contentReference[oaicite:2]{index=2}.</p>
+  </section>
+
+  <script>
+    function show(id) {
+      document.querySelectorAll('section').forEach(s=>{
+        s.classList.toggle('active', s.id===id);
+      });
+    }
+    show('info');
+  </script>
+</body>
+</html>
